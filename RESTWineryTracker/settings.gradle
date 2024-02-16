@@ -1,0 +1,2 @@
+rootProject.name = 'RESTWineryTracker'
+includeFlat 'JPAWineryTracker'
