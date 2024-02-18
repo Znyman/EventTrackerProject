@@ -43,5 +43,14 @@ public class WineryServiceImpl implements WineryService {
 		return true;
 	}
 
+	@Override
+	public Winery findById(int id) {
+		Optional<Winery> wineryOpt = wineryRepo.findById(id);
+		if (wineryOpt.isPresent()) {
+			return wineryOpt.get();
+		}
+		return null;
+	}
+
 
 }

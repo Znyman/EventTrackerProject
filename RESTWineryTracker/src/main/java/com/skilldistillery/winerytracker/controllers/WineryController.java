@@ -30,6 +30,16 @@ public class WineryController {
 		return wineryService.index();
 	}
 	
+	@GetMapping("wineries/{id}")
+	public Winery getWinery(@PathVariable("id") int id, HttpServletResponse resp) {
+		Winery winery = wineryService.findById(id);
+		if (winery != null) {
+			return winery;
+		}
+		resp.setStatus(404);
+		return null;
+	}
+	
 	@PostMapping("wineries")
 	public Winery createWinery(@RequestBody Winery winery, HttpServletRequest req, HttpServletResponse resp) {
 		try {
