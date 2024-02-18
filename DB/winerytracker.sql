@@ -23,6 +23,9 @@ DROP TABLE IF EXISTS `winery` ;
 CREATE TABLE IF NOT EXISTS `winery` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(200) NOT NULL,
+  `street` VARCHAR(200) NULL,
+  `city` VARCHAR(200) NULL,
+  `state` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -42,7 +45,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `winerytrackerdb`;
-INSERT INTO `winery` (`id`, `name`) VALUES (1, 'Favero Vineyards');
+INSERT INTO `winery` (`id`, `name`, `street`, `city`, `state`) VALUES (1, 'Favero Vineyards', '3939 Lovall Valley Rd', 'Sonoma', 'CA');
 
 COMMIT;
 

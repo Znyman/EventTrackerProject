@@ -14,6 +14,9 @@ public class Winery {
 	private int id;
 	
 	private String name;
+	private String street;
+	private String city;
+	private String state;
 
 	public Winery() {
 	}
@@ -32,6 +35,30 @@ public class Winery {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
 	}
 
 	@Override
@@ -53,7 +80,8 @@ public class Winery {
 
 	@Override
 	public String toString() {
-		return "Winery [id=" + id + ", name=" + name + "]";
+		return "Winery [id=" + id + ", name=" + name + ", street=" + street + ", city=" + city + ", state=" + state
+				+ "]";
 	}
 	
 	
