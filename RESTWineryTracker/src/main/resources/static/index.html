@@ -15,6 +15,7 @@
 	<main class="container">
 		<h1 id="pageHeader">Winery Tracker</h1>
 		<h2 id="errorHeader"></h2>
+		<hr>
 		<form name="createWineryForm" method="POST" class="row g-3">
 			<div class="col-12">
 				<label for="inputWineryName" class="form-label" style="color:white;">Winery Name</label> <input
@@ -37,6 +38,22 @@
 			</div>
 		</form>
 		<hr>
+		<form name="searchWineryForm" method="GET">
+			<label for="searchCity" class="form-label" style="color:white;">Search for a winery by city</label> <input
+					type="text" class="form-control" name="searchCity" id="searchCity">
+					<br>
+			<button type="submit" name="searchCityButton" class="btn btn-primary">Search by City</button>
+		</form>
+		<br>
+		<div id="winerySearchResult">
+			<table class="table table-hover">
+				<thead class="table-dark" id="winerySearchTableHead">
+				</thead>
+				<tbody id="winerySearchTable"></tbody>
+			</table>
+		</div>
+		<hr>
+		<h4 id="pageHeader">You can click into the cells of the table and change the information then hit 'Edit Winery' to update a winery.</h4>
 		<div id="wineryListDiv">
 			<table class="table table-hover">
 				<thead class="table-dark">
@@ -52,10 +69,9 @@
 				<tbody id="wineryTable"></tbody>
 			</table>
 		</div>
-		<div id="wineryDetailsDiv"></div>
-		<div id="addWineryDiv"></div>
-		<div id="editWineryDiv"></div>
-
+		<br>
+		<br>
+		<br>
 	</main>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

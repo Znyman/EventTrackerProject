@@ -87,7 +87,15 @@ public class WineryController {
 		}
 	}
 	
-	
+	@GetMapping("wineries/search/{city}")
+	public List<Winery> findWineryByCity(@PathVariable("city") String city, HttpServletResponse resp) {
+		List<Winery> wineries = wineryService.findByCity(city);
+		if (wineries != null) {
+			return wineries;
+		}
+		resp.setStatus(404);
+		return null;
+	}
 	
 	
 	

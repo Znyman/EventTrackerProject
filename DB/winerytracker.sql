@@ -46,6 +46,12 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 START TRANSACTION;
 USE `winerytrackerdb`;
 INSERT INTO `winery` (`id`, `name`, `street`, `city`, `state`) VALUES (1, 'Favero Vineyards', '3939 Lovall Valley Rd', 'Sonoma', 'CA');
+INSERT INTO `winery` (`id`, `name`, `street`, `city`, `state`) VALUES (2, 'Nicholson Ranch', '4200 Napa Rd', 'Sonoma', 'CA');
+INSERT INTO `winery` (`id`, `name`, `street`, `city`, `state`) VALUES (3, 'Hudson Napa Valley', '5398 Sonoma Hwy', 'Napa', 'CA');
+INSERT INTO `winery` (`id`, `name`, `street`, `city`, `state`) VALUES (4, 'Scribe Winery', '2100 Denmark St', 'Sonoma', 'CA');
+INSERT INTO `winery` (`id`, `name`, `street`, `city`, `state`) VALUES (5, 'Keever Vineyards & Winery', '26 Vineyard View Dr', 'Napa', 'CA');
+INSERT INTO `winery` (`id`, `name`, `street`, `city`, `state`) VALUES (6, 'Domaine Chandon', '1 California Dr', 'Yountville', 'CA');
+INSERT INTO `winery` (`id`, `name`, `street`, `city`, `state`) VALUES (7, 'Priest Ranch', '6490 Washington St', 'Yountville', 'CA');
 
 COMMIT;
 

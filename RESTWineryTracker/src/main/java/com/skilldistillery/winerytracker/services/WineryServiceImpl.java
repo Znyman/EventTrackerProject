@@ -29,7 +29,12 @@ public class WineryServiceImpl implements WineryService {
 	public Winery update(Winery winery, int id) {
 		Optional<Winery> wineryOpt = wineryRepo.findById(id);
 		if (wineryOpt.isPresent()) {
-			return wineryRepo.save(winery);
+			Winery managed = wineryOpt.get();
+			managed.setCity(winery.getCity());
+			managed.setName(winery.getName());
+			managed.setState(winery.getState());
+			managed.setStreet(winery.getStreet());
+			return wineryRepo.save(managed);
 		}
 		return null;
 	}
@@ -50,6 +55,11 @@ public class WineryServiceImpl implements WineryService {
 			return wineryOpt.get();
 		}
 		return null;
+	}
+
+	@Override
+	public List<Winery> findByCity(String city) {
+		return wineryRepo.findByCity(city);
 	}
 
 

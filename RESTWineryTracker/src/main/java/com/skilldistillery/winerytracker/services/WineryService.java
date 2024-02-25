@@ -10,4 +10,5 @@ public interface WineryService {
 	Winery create(Winery winery);
 	Winery update(Winery winery, int id);
 	boolean delete(int id);
+	List<Winery> findByCity(String city);
 }
