@@ -1,6 +1,6 @@
 # Winery Tracker
 
-Winery Tracker is a Java Spring Boot application that serves as a simple tracker for wineries. It uses Java Persistence API (JPA) for data persistence and implements a REST API with repository and service layers.
+Winery Tracker is a Java Spring Boot application that serves as a simple tracker for wineries. It uses Java Persistence API (JPA) for data persistence and implements a REST API with repository and service layers. The frontend was built using HTML, CSS, Javascript, and AJAX.
 
 ## Table of Contents
 
@@ -22,9 +22,14 @@ Winery Tracker is a Java Spring Boot application that serves as a simple tracker
 - **POST /wineries**: Create a new winery.
 - **PUT /wineries/{id}**: Update information for a specific winery.
 - **DELETE /wineries/{id}**: Delete a winery.
+- **GET /wineries/search/{city}**: Find a list of wineries in a specific city.
 
 ## Technologies Used
 
 - Java Spring Boot
 - Java Persistence API (JPA)
 - Gradle
+- HTML
+- CSS
+- Javascript
+- AJAX
