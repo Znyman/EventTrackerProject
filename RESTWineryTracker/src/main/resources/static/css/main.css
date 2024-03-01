@@ -1,10 +1,13 @@
 @charset "UTF-8";
 
 body {
-	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	background-image:
-		url("https://media.istockphoto.com/id/1049837208/photo/pouring-red-wine-into-the-glass-barrel-outdoor-in-bordeaux-vineyard.jpg?s=612x612&w=0&k=20&c=xxOIgN2N1pO3H8ETyvSN4ZVtF75a0gFqKQGa0wROx5M=");
+		url("https://images7.alphacoders.com/632/632898.jpg");
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
 }
 

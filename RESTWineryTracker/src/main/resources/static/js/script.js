@@ -103,7 +103,7 @@ function displayWineries(wineries) {
 
 function editWinery(winery, wineryId) {
 	let xhr = new XMLHttpRequest();
-	xhr.open("PUT", "http://localhost:8083/api/wineries/" + wineryId);
+	xhr.open("PUT", "api/wineries/" + wineryId);
 	xhr.setRequestHeader("Content-Type", "application/json");
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState === xhr.DONE) {
@@ -121,7 +121,7 @@ function editWinery(winery, wineryId) {
 
 function deleteWinery(wineryId) {
 	let xhr = new XMLHttpRequest();
-	xhr.open("DELETE", "http://localhost:8083/api/wineries/" + wineryId);
+	xhr.open("DELETE", "api/wineries/" + wineryId);
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState === xhr.DONE) {
 			if (xhr.status >= 200 && xhr.status <= 300) {
@@ -138,7 +138,7 @@ function deleteWinery(wineryId) {
 
 function postWinery(winery) {
 	let xhr = new XMLHttpRequest();
-	xhr.open("POST", "http://localhost:8083/api/wineries");
+	xhr.open("POST", "api/wineries");
 	xhr.setRequestHeader("Content-Type", "application/json");
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState === xhr.DONE) {
